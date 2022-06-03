@@ -1,0 +1,416 @@
+# Coverage data, format version: 2.0
+# Statement data:
+# - id
+# - source path
+# - package name
+# - class name
+# - class type (Class, Object or Trait)
+# - full class name
+# - method name
+# - start offset
+# - end offset
+# - line number
+# - symbol name
+# - tree name
+# - is branch
+# - invocations count
+# - is ignored
+# - description (can be multi-line)
+# '' sign
+# ------------------------------------------
+1
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala
+<empty>
+RabbitMQConnection
+Object
+RabbitMQConnection
+getConnection
+216
+239
+10
+com.rabbitmq.client.ConnectionFactory.<init>
+Apply
+false
+0
+false
+new com.rabbitmq.client.ConnectionFactory()
+
+2
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala
+<empty>
+RabbitMQConnection
+Object
+RabbitMQConnection
+getConnection
+244
+282
+11
+com.rabbitmq.client.ConnectionFactory.setUsername
+Apply
+false
+0
+false
+connectionFactory.setUsername("admin")
+
+3
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala
+<empty>
+RabbitMQConnection
+Object
+RabbitMQConnection
+getConnection
+287
+328
+12
+com.rabbitmq.client.ConnectionFactory.setPassword
+Apply
+false
+0
+false
+connectionFactory.setPassword("password")
+
+4
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala
+<empty>
+RabbitMQConnection
+Object
+RabbitMQConnection
+getConnection
+333
+366
+13
+com.rabbitmq.client.ConnectionFactory.newConnection
+Apply
+false
+0
+false
+connectionFactory.newConnection()
+
+5
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala
+<empty>
+RabbitMQConnection
+Object
+RabbitMQConnection
+getConnection
+182
+370
+9
+scala.util.Try.apply
+Apply
+false
+0
+false
+scala.util.Try.apply[com.rabbitmq.client.Connection]({
+  val connectionFactory: com.rabbitmq.client.ConnectionFactory = new com.rabbitmq.client.ConnectionFactory();
+  connectionFactory.setUsername("admin");
+  connectionFactory.setPassword("password");
+  connectionFactory.newConnection()
+})
+
+6
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+initializeConnection
+300
+334
+10
+RabbitMQConnection.getConnection
+Apply
+false
+0
+false
+RabbitMQConnection.getConnection()
+
+7
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+initializeConnection
+528
+543
+15
+<nosymbol>
+Throw
+false
+0
+false
+throw exception
+
+8
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+initializeConnection
+582
+608
+16
+com.rabbitmq.client.Connection.createChannel
+Apply
+false
+0
+false
+connection.createChannel()
+
+9
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+initializeConnection
+578
+609
+16
+scala.util.Try.apply
+Apply
+false
+0
+false
+scala.util.Try.apply[com.rabbitmq.client.Channel](connection.createChannel())
+
+10
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+<none>
+763
+778
+22
+com.rabbitmq.client.Delivery.getBody
+Apply
+false
+0
+false
+message.getBody()
+
+11
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+<none>
+780
+787
+22
+<nosymbol>
+Literal
+false
+0
+false
+"UTF-8"
+
+12
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+<none>
+752
+788
+22
+java.lang.String.<init>
+Apply
+false
+0
+false
+new scala.Predef.String(message.getBody(), "UTF-8")
+
+13
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1128
+1169
+32
+<nosymbol>
+Throw
+false
+0
+false
+throw new scala.`package`.Exception(exception.getMessage())
+
+14
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1237
+1257
+34
+com.typesafe.config.ConfigFactory.load
+Apply
+false
+0
+false
+com.typesafe.config.ConfigFactory.load()
+
+15
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1294
+1344
+35
+com.typesafe.config.Config.getConfig
+Apply
+false
+0
+false
+configFactory.getConfig("rabbit-mq-configuration")
+
+16
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1365
+1410
+36
+com.typesafe.config.Config.getString
+Apply
+false
+0
+false
+rabbitMQConfiguration.getString("QUEUE_NAME")
+
+17
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1419
+1473
+37
+com.rabbitmq.client.Channel.queueDeclare
+Apply
+false
+0
+false
+channel.queueDeclare(queue, false, false, false, null)
+
+18
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1550
+1557
+39
+<nosymbol>
+Literal
+false
+0
+false
+"greet"
+
+19
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1559
+1563
+39
+<nosymbol>
+Literal
+false
+0
+false
+true
+
+20
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1565
+1585
+39
+<nosymbol>
+Literal
+false
+0
+false
+"localadminconsumer"
+
+21
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1587
+1602
+39
+Receiver.deliverCallback
+Select
+false
+0
+false
+Receiver.this.deliverCallback
+
+22
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1604
+1618
+39
+Receiver.cancelCallback
+Select
+false
+0
+false
+Receiver.this.cancelCallback
+
+23
+/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala
+<empty>
+Receiver
+Class
+Receiver
+consumeMessage
+1529
+1619
+39
+com.rabbitmq.client.Channel.basicConsume
+Apply
+false
+0
+false
+channel.basicConsume("greet", true, "localadminconsumer", Receiver.this.deliverCallback, Receiver.this.cancelCallback)
+

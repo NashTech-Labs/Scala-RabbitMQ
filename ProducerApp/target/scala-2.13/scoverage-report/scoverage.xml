@@ -1,0 +1,94 @@
+<scoverage 
+statement-count="20" statements-invoked="18" statement-rate="90.00" branch-rate="100.00" version="1.0" timestamp="1654238402060">
+    <packages>
+        <package name="&lt;empty&gt;" statement-count="20" statements-invoked="18" statement-rate="90.00">
+            <classes>
+                <class 
+                name="Sender" filename="Sender.scala" statement-count="15" statements-invoked="13" statement-rate="86.67" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Sender/sendMessage" statement-count="11" statements-invoked="10" statement-rate="90.91" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1225" end="1247" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1025" end="1045" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1346" end="1361" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1189" end="1191" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1105" end="1159" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1202" end="1206" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="923" end="964" line="25" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1168" end="1249" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1208" end="1248" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1066" end="1096" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="sendMessage" start="1193" end="1200" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Sender/initializeConnection" statement-count="4" statements-invoked="3" statement-rate="75.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="initializeConnection" start="651" end="677" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="initializeConnection" start="571" end="612" line="15" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="initializeConnection" start="647" end="678" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Sender" class-type="Class" full-class-name="Sender" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/Sender.scala" method="initializeConnection" start="359" end="391" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="RabbitMQConnection" filename="RabbitMQConnection.scala" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/RabbitMQConnection/getConnection" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="233" end="271" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="152" end="359" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="322" end="355" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="205" end="228" line="9" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ProducerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="276" end="317" line="11" branch="false" invocation-count="2" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

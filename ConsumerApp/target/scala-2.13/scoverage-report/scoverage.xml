@@ -1,0 +1,108 @@
+<scoverage 
+statement-count="23" statements-invoked="21" statement-rate="91.30" branch-rate="100.00" version="1.0" timestamp="1654238411167">
+    <packages>
+        <package name="&lt;empty&gt;" statement-count="23" statements-invoked="21" statement-rate="91.30">
+            <classes>
+                <class 
+                name="Receiver" filename="Receiver.scala" statement-count="18" statements-invoked="16" statement-rate="88.89" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Receiver/consumeMessage" statement-count="11" statements-invoked="10" statement-rate="90.91" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1529" end="1619" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1419" end="1473" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1565" end="1585" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1237" end="1257" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1128" end="1169" line="32" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1604" end="1618" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1365" end="1410" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1559" end="1563" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1550" end="1557" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1587" end="1602" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="consumeMessage" start="1294" end="1344" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Receiver/initializeConnection" statement-count="4" statements-invoked="3" statement-rate="75.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="initializeConnection" start="582" end="608" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="initializeConnection" start="528" end="543" line="15" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="initializeConnection" start="578" end="609" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="initializeConnection" start="300" end="334" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Receiver/&lt;none&gt;" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="&lt;none&gt;" start="780" end="787" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="&lt;none&gt;" start="763" end="778" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Receiver" class-type="Class" full-class-name="Receiver" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/Receiver.scala" method="&lt;none&gt;" start="752" end="788" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="RabbitMQConnection" filename="RabbitMQConnection.scala" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/RabbitMQConnection/getConnection" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="244" end="282" line="11" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="182" end="370" line="9" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="333" end="366" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="216" end="239" line="10" branch="false" invocation-count="2" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="RabbitMQConnection" class-type="Object" full-class-name="RabbitMQConnection" source="/home/knoldus/IdeaProjects/Scala-RabbitMQ/ConsumerApp/src/main/scala/RabbitMQConnection.scala" method="getConnection" start="287" end="328" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

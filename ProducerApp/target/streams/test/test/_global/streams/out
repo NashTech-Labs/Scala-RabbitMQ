@@ -1,0 +1,25 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SenderTest, org.scalatest.tools.Framework$$anon$1@14ff88b0, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SenderIntegrationTest, org.scalatest.tools.Framework$$anon$1@14ff88b0, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RabbitMQConnectionTest, org.scalatest.tools.Framework$$anon$1@14ff88b0, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRabbitMQConnectionTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRabbit MQ Connection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be established[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSenderIntegrationTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32minitializeConnection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should successfully establish connection channel[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msendMessage[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should successfully send the message[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSenderTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msendMessage[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should successfully send message[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32minitializeConnection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be unsuccessful if establishing connection fails[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 4 seconds, 309 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 3, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 5, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RabbitMQConnectionTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SenderIntegrationTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SenderTest[0m

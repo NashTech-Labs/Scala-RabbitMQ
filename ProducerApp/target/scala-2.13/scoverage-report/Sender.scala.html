@@ -1,0 +1,439 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          Sender.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>import com.rabbitmq.client.{Channel, Connection}
+</span>2 <span style=''>import com.typesafe.config.{Config, ConfigFactory}
+</span>3 <span style=''>import com.typesafe.scalalogging.LazyLogging
+</span>4 <span style=''>
+</span>5 <span style=''>import java.nio.charset.StandardCharsets
+</span>6 <span style=''>import scala.util.{Failure, Success, Try}
+</span>7 <span style=''>
+</span>8 <span style=''>class Sender extends LazyLogging {
+</span>9 <span style=''>
+</span>10 <span style=''>  def initializeConnection(): Try[Channel] = {
+</span>11 <span style=''>    val rabbitMQConnection: Try[Connection] = </span><span style='background: #AEF1AE'>RabbitMQConnection.getConnection</span><span style=''>
+</span>12 <span style=''>    val connectionChannel: Try[Channel] = rabbitMQConnection match {
+</span>13 <span style=''>      case Failure(exception) =&gt;
+</span>14 <span style=''>        logger.error(&quot;Could not establish connection with RabbitMQ&quot;)
+</span>15 <span style=''>        </span><span style='background: #F0ADAD'>throw new Exception(exception.getMessage)</span><span style=''>
+</span>16 <span style=''>      case Success(connection) =&gt; </span><span style='background: #AEF1AE'>Try(connection.createChannel())</span><span style=''>
+</span>17 <span style=''>    }
+</span>18 <span style=''>    connectionChannel
+</span>19 <span style=''>  }
+</span>20 <span style=''>
+</span>21 <span style=''>  def sendMessage(connectionChannel: Try[Channel], message: String): String =  {
+</span>22 <span style=''>    connectionChannel match {
+</span>23 <span style=''>      case Failure(exception) =&gt;
+</span>24 <span style=''>        logger.error(exception.printStackTrace().toString)
+</span>25 <span style=''>        </span><span style='background: #F0ADAD'>throw new Exception(exception.getMessage)</span><span style=''>
+</span>26 <span style=''>      case Success(channel) =&gt;
+</span>27 <span style=''>        val config: Config = </span><span style='background: #AEF1AE'>ConfigFactory.load()</span><span style=''>
+</span>28 <span style=''>        val queue = </span><span style='background: #AEF1AE'>config.getString(&quot;QUEUE_NAME&quot;)</span><span style=''>
+</span>29 <span style=''>        </span><span style='background: #AEF1AE'>channel.queueDeclare(queue, false, false, false, null)</span><span style=''>
+</span>30 <span style=''>        </span><span style='background: #AEF1AE'>channel.basicPublish(&quot;&quot;, &quot;greet&quot;, null, message.getBytes(StandardCharsets.UTF_8))</span><span style=''>
+</span>31 <span style=''>        logger.info(s&quot;[X] Sent '$message'&quot;)
+</span>32 <span style=''>        //logger.info(s&quot;[X] Sent 'Hello!'&quot;)
+</span>33 <span style=''>        </span><span style='background: #AEF1AE'>channel.close()</span><span style=''>
+</span>34 <span style=''>        message
+</span>35 <span style=''>    }
+</span>36 <span style=''>  }
+</span>37 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Tests</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          359
+          -
+          391
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          RabbitMQConnection.getConnection
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          RabbitMQConnection.getConnection
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          571
+          -
+          612
+        </td>
+        <td>
+          Throw
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #F0ADAD">
+          throw new scala.`package`.Exception(exception.getMessage())
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          651
+          -
+          677
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.rabbitmq.client.Connection.createChannel
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          connection.createChannel()
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          647
+          -
+          678
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Try.apply
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Try.apply[com.rabbitmq.client.Channel](connection.createChannel())
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          923
+          -
+          964
+        </td>
+        <td>
+          Throw
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #F0ADAD">
+          throw new scala.`package`.Exception(exception.getMessage())
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          1025
+          -
+          1045
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.typesafe.config.ConfigFactory.load
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          com.typesafe.config.ConfigFactory.load()
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          1066
+          -
+          1096
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.typesafe.config.Config.getString
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          config.getString(&quot;QUEUE_NAME&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          1105
+          -
+          1159
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.rabbitmq.client.Channel.queueDeclare
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          channel.queueDeclare(queue, false, false, false, null)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          1225
+          -
+          1247
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          java.nio.charset.StandardCharsets.UTF_8
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          java.nio.charset.StandardCharsets.UTF_8
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          1189
+          -
+          1191
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;&quot;
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          1202
+          -
+          1206
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          null
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          1168
+          -
+          1249
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.rabbitmq.client.Channel.basicPublish
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          channel.basicPublish(&quot;&quot;, &quot;greet&quot;, null, message.getBytes(java.nio.charset.StandardCharsets.UTF_8))
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          1208
+          -
+          1248
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.getBytes
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          message.getBytes(java.nio.charset.StandardCharsets.UTF_8)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          1193
+          -
+          1200
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;greet&quot;
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          1346
+          -
+          1361
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.rabbitmq.client.Channel.close
+        </td>
+        <td>
+          senderintegrationtest
+        </td>
+        <td style="background: #AEF1AE">
+          channel.close()
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>
