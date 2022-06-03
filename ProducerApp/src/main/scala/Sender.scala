@@ -18,7 +18,7 @@ class Sender extends LazyLogging {
     connectionChannel
   }
 
-  def sendMessage(connectionChannel: Try[Channel], message: String): String =  {
+  def sendMessage(connectionChannel: Try[Channel], message: String): String = {
     connectionChannel match {
       case Failure(exception) =>
         logger.error(exception.printStackTrace().toString)

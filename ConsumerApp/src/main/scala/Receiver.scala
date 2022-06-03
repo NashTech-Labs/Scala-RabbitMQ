@@ -7,7 +7,7 @@ import scala.util.{Failure, Success, Try}
 class Receiver extends LazyLogging {
 
   def initializeConnection(): Try[Channel] = {
-    val rabbitMQConnection: Try[Connection] = RabbitMQConnection.getConnection()
+    val rabbitMQConnection: Try[Connection] = RabbitMQConnection.getConnection
 
     val connectionChannel: Try[Channel] = rabbitMQConnection match {
       case Failure(exception) =>
@@ -18,12 +18,12 @@ class Receiver extends LazyLogging {
     connectionChannel
   }
 
-  val deliverCallback: DeliverCallback = (consumerTag: String, message: Delivery) => {
+  val deliverCallback: DeliverCallback = (_: String, message: Delivery) => {
     val messageBody = new String(message.getBody, "UTF-8")
     logger.info(s"[x] Received '$messageBody'")
   }
 
-  val cancelCallback: CancelCallback = (consumerTag: String) => logger.info("Cancelled")
+  val cancelCallback: CancelCallback = (_: String) => logger.info("Cancelled")
 
   def consumeMessage(connectionChannel: Try[Channel]): String = {
     connectionChannel match {

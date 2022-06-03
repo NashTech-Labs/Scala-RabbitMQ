@@ -5,8 +5,9 @@ import scala.util.Try
 class RabbitMQConnection {
 
 }
+
 object RabbitMQConnection {
-  def getConnection(): Try[Connection] = Try {
+  def getConnection: Try[Connection] = Try {
     val connectionFactory = new ConnectionFactory()
     connectionFactory.setUsername("admin")
     connectionFactory.setPassword("password")

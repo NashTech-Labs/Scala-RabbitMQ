@@ -5,8 +5,8 @@ import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach}
 
 import scala.util.Try
 
-class SenderTest extends AnyFlatSpec with BeforeAndAfterAll with BeforeAndAfterEach{
-  var mockChannel: Channel =  mock[Channel]
+class SenderTest extends AnyFlatSpec with BeforeAndAfterAll with BeforeAndAfterEach {
+  var mockChannel: Channel = mock[Channel]
 
   "sendMessage" should "successfully send message" in {
     val sender: Sender = new Sender()
